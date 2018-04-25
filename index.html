@@ -18,7 +18,7 @@
     <p>Think you ave what it takes? Show us.</p>
     <form>
         <!-- PERSONAL DATA -->
-        <section>
+        <section class="info">
             <h2>1. Personal Information</h2>
             <div class="first-container">
                 <div class="col-8">
@@ -47,66 +47,80 @@
             <h2>2. Skill and location</h2>
             <div>
                 <p>Which is your primary design discipline? *</p>
-                <p>
-                    <input type="radio" name="design">Design Research</p>
-                <p>
-                    <input type="radio" name="design">Visual Design</p>
-                <p>
-                    <input type="radio" name="design">UX Design</p>
-                <p>
-                    <input type="radio" name="design">Front-end Dev</p>
+                <div class="radio-buttons">
+                    <ul>
+                        <li>
+                            <input type="radio" id="research" name="design">
+                            <label for="research">Design Research</label>   
+                        </li>
+                        <li>
+                            <input type="radio" name="design" id="visual">
+                            <label for="visual">Visual Design</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="design" id="ux">
+                            <label for="ux" >UX Design</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="design" id="dev">
+                            <label for="dev"> Front-end Dev</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div>
-                <p>Do you have experience with any other disciplines?</p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Visual Design
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    UX Design
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Front-end Development
-                </p>
-            </div>
-            <div>
-                <p>Where are you interested working? *</p>
-                <p>You must be legaly authorized to work without visa sponsorship in the location you choose.</p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Austin, Texas
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    New York, New York
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Toronto, Canada
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Shanghai, China
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Dublin, Irland
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Hursley, United Kingdom
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Boblingen, Germany
-                </p>
-                <p>
-                    <input type="checkbox" name="design">
-                    Somewhere else 
-                </p>
+            <div class="checkbox-section">
+                <div class="col-6">
+                    <p>Do you have experience with any other disciplines?</p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Visual Design
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        UX Design
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Front-end Development
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p>Where are you interested working? *</p>
+                    <p>You must be legaly authorized to work without visa sponsorship in the location you choose.</p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Austin, Texas
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        New York, New York
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Toronto, Canada
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Shanghai, China
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Dublin, Irland
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Hursley, United Kingdom
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Boblingen, Germany
+                    </p>
+                    <p>
+                        <input type="checkbox" name="design">
+                        Somewhere else 
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -117,9 +131,11 @@
                 Prove you're IBM's next great designer 
                 by showing us who you are. What you've done. 
                 How you think. Tell us your story.</p>
-            <input type="link" name="link" placeholder="Portfolio link *">
-            <input type="text" name="Information" placeholder="Anything else (another link, availability, etc)?">
-            <input type="submit" value="submit">
+            <input type="link" name="link" placeholder="Portfolio link *" id="link">
+            <br>
+            <textarea  rows="5" cols="1" placeholder="Anything else (another link, availability, etc)?" id="information"></textarea>
+            <br>
+            <input type="submit" value="submit" class="submit">
         </section>
 
     </form>
