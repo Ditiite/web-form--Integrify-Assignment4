@@ -17,79 +17,103 @@
     <h1>Let's talk</h1>
     <p>Think you ave what it takes? Show us.</p>
     <form>
+        <!-- PERSONAL DATA -->
         <section>
             <h2>1. Personal Information</h2>
-            <p>
-                <label for="name">
-                    Full name
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="name" name="Full name">
-            </p>
-            <p>
-                <label for="phone">
-                    Phone
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="number" id="phone" name="Phone">
-            </p>
-            <p>
-                <label for="email">
-                    Email
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="email" name="Email">
-            </p>
-            <p>
-                <label for="email">
-                    Re-enter email
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="email" name="Re-enter email">
-            </p>
-            <p>
-                <label for="address">
-                   Address
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="address" name="address">
-            </p>
-            <p>
-                <label for="city">
-                    City
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="city" name="city">
-            </p>
-            <p>
-                <label for="state">
-                    State
-                </label>
-                <input type="text" id="state" name="state">
-            </p>
-            <p>
-                <label for="country/region">
-                    Country/Region
-                    <abbr title="required">*</abbr>
-                </label>
-                <input type="text" id="country" name="Country/region">
-            </p>
-            <p>
-                <label for="zip/postal code">
-                    Zip/Postal code
-                </label>
-                <input type="text" id="zip" name=" Zip/Postal code">
-            </p>
-            <p>
-                <label for="about">
-                    How did you hear about us
-                </label>
-                <input type="text" name="How did you hear about us">
-            </p>
+            <input type="text" id="name" name="Full name" placeholder="Full name *">
+            <input type="number" id="phone" name="Phone" placeholder="Phone *">
+            <input type="email" id="email" name="Email" placeholder="Email *">
+            <input type="email" id="email" name="Re-enter email" placeholder="Re-enter email *">
+            <input type="address" id="address" name="address" placeholder="Address *">
+            <p></p>
+            <input type="text" id="city" name="city" placeholder="City *">
+            <input type="text" id="state" name="state" placeholder="State *">
+            <input type="text" id="country" name="Country/region" placeholder="Country/Region *">
+            <input type="number" id="zip" name="Zip/Postal code" placeholder="Zip/Postal code *">
+            <input type="text" name="How did you hear about us" placeholder="How did you hear about us">
         </section>
 
-    </form>
+        <!-- SKILLS AND LOCATION -->
+        <section>
+            <h2>2. Skill and location</h2>
+            <div>
+                <p>Which is your primary design discipline? *</p>
+                <p>
+                    <input type="radio" name="design">Design Research</p>
+                <p>
+                    <input type="radio" name="design">Visual Design</p>
+                <p>
+                    <input type="radio" name="design">UX Design</p>
+                <p>
+                    <input type="radio" name="design">Front-end Dev</p>
+            </div>
 
+            <div>
+                <p>Do you have experience with any other disciplines?</p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Visual Design
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    UX Design
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Front-end Development
+                </p>
+            </div>
+            <div>
+                <p>Where are you interested working? *</p>
+                <p>You must be legaly authorized to work without visa sponsorship in the location you choose.</p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Austin, Texas
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    New York, New York
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Toronto, Canada
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Shanghai, China
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Dublin, Irland
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Hursley, United Kingdom
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Boblingen, Germany
+                </p>
+                <p>
+                    <input type="checkbox" name="design">
+                    Somewhere else 
+                </p>
+            </div>
+        </section>
+
+    <!-- PORTFOLIO -->
+        <section>
+            <h2>3. Portfolio</h2>
+            <p>
+                Prove you're IBM's next great designer 
+                by showing us who you are. What you've done. 
+                How you think. Tell us your story.</p>
+            <input type="link" name="link" placeholder="Portfolio link *">
+            <input type="text" name="Information" placeholder="Anything else (another link, availability, etc)?">
+            <input type="submit" value="submit">
+        </section>
+        
+    </form>
 </body>
 
 </html>
