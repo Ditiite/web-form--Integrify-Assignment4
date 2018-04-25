@@ -13,23 +13,32 @@
 
 </head>
 
-<body>
+<body class="container">
     <h1>Let's talk</h1>
     <p>Think you ave what it takes? Show us.</p>
     <form>
         <!-- PERSONAL DATA -->
         <section>
             <h2>1. Personal Information</h2>
-            <input type="text" id="name" name="Full name" placeholder="Full name *">
-            <input type="number" id="phone" name="Phone" placeholder="Phone *">
-            <input type="email" id="email" name="Email" placeholder="Email *">
-            <input type="email" id="email" name="Re-enter email" placeholder="Re-enter email *">
+            <div class="first-container">
+                <div class="col-8">
+                    <input type="text" id="name" name="Full name" placeholder="Full name *">
+                    <input type="email" id="email" name="Email" placeholder="Email *">
+                    <input type="email" id="email" name="Re-enter email" placeholder="Re-enter email *">
+                </div>
+                <div class="col-4">
+                    <input type="number" id="phone" name="Phone" placeholder="Phone *">
+                </div>
+            </div>
             <input type="address" id="address" name="address" placeholder="Address *">
-            <p></p>
-            <input type="text" id="city" name="city" placeholder="City *">
-            <input type="text" id="state" name="state" placeholder="State *">
-            <input type="text" id="country" name="Country/region" placeholder="Country/Region *">
-            <input type="number" id="zip" name="Zip/Postal code" placeholder="Zip/Postal code *">
+            <input type="address" id="address" name="address">
+            <div class="city-data">
+                <input type="text" id="city" name="city" placeholder="City *">
+                <input type="text" id="state" name="state" placeholder="State *">
+                <input type="text" id="country" name="Country/region" placeholder="Country/Region *">
+                <input type="number" id="zip" name="Zip/Postal code" placeholder="Zip/Postal code *">
+            </div>
+          
             <input type="text" name="How did you hear about us" placeholder="How did you hear about us">
         </section>
 
@@ -112,7 +121,7 @@
             <input type="text" name="Information" placeholder="Anything else (another link, availability, etc)?">
             <input type="submit" value="submit">
         </section>
-        
+
     </form>
 </body>
 
