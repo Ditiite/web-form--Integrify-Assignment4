@@ -3,8 +3,9 @@ html {
 }
 
 body {
-    font-size: 18px;
+    font-size: 16px;
     color: silver;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 input {
@@ -18,7 +19,7 @@ textarea {
 
 .container {
     background-color: #444e58;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
     padding: 20px 100px;
 }
@@ -78,6 +79,34 @@ h2 {
     margin-right: 0;
 }
 
+#address {
+    background-color: #444e58;
+    color: silver;
+    border: none;
+    border-bottom: 1px solid silver;
+    margin: 15px 0 0;
+    width: 100%;
+    font-size: 0.9em;
+    resize: none;
+    padding-top: 15px;
+}
+
+/* #address::-webkit-input-placeholder {
+    position: absolute;
+    bottom: 0;
+}
+
+#address:-moz-placeholder {
+    position: absolute;
+    bottom: 0;
+}
+
+#address:-ms-input-placeholder {
+    position: absolute;
+    bottom: 0;
+} */
+
+
 /****** SKILLS AND LOCATION *****/
 .radio-buttons {
     display: flex;
@@ -90,6 +119,7 @@ h2 {
     border: 1px solid silver;
     padding: 10px;
     flex-basis: 20%;
+    cursor: pointer;
 }
 
 .radio-buttons input {
@@ -103,6 +133,7 @@ input[type="radio"]:checked + label {
 /***** SKILLS CHECKBOX ****/
 .checkbox-section {
     display: flex;
+    margin-top: 1em;
 }
 
 .col-6 {
@@ -132,6 +163,7 @@ input[type="radio"]:checked + label {
 .checkbox label {
     position: relative;
     padding-left: 25px;
+    cursor: pointer;
 }
 
 .checkbox label::before {
@@ -172,6 +204,11 @@ input[type="radio"]:checked + label {
 
 .checkbox input[type="checkbox"]:checked + label::after {
     content: "";
+    
+}
+
+.checkbox input[type="checkbox"]:checked + label::before {
+    background: rgb(228, 228, 228);
 }
 
 /**** LAST PART ****/
@@ -186,13 +223,16 @@ input[type="radio"]:checked + label {
     margin: 15px 0;
     width: 100%;
     font-size: 0.8em;
+    resize: none;
 }
 
 .submit {
     background-color: #00aff9;
-    padding: 10px;
+    padding: 10px 20px;
     color: white;
     border: 1px solid silver;
+    width: 140px;
+    cursor: pointer;
 }
 
 .portfolio input:first-of-type {
