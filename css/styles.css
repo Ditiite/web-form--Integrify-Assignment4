@@ -1,6 +1,7 @@
 html {
     background-color: black;
 }
+
 body {
     font-size: 18px;
     color: silver;
@@ -8,6 +9,11 @@ body {
 
 input {
     color: silver;
+    outline-color: #92a7bb;
+}
+
+textarea {
+    outline-color: #92a7bb;    
 }
 
 .container {
@@ -30,16 +36,16 @@ h2 {
     margin-bottom: 15px;
 }
 
+
+
 /*** INPUT STYLE ***/
-input {
+.info input {
     background-color: #444e58;
     border: none;
     border-bottom: 1px solid silver;
     font-size: 0.8em;
     padding-top: 20px;
-}
-
-.info input {
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -76,32 +82,18 @@ input {
 .radio-buttons {
     display: flex;
     flex-direction: row;
-    width: 100%;
-}
-
-.radio-buttons ul {
-    width: 100%;
-    padding: 0;
-    display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.radio-buttons ul li {
+.radio-buttons label {
     border: 1px solid silver;
-    width: 23%;
-    list-style: none;
-    padding: 10x;
+    padding: 10px;
+    flex-basis: 20%;
 }
 
-.radio-buttons ul li input {
+.radio-buttons input {
     display: none;
-}
-
-label {
-    padding: 15px;
-    width: 100%;
-    text-align: center;
 }
 
 input[type="radio"]:checked + label {
@@ -111,22 +103,76 @@ input[type="radio"]:checked + label {
 /***** SKILLS CHECKBOX ****/
 .checkbox-section {
     display: flex;
-    flex-direction: row;
 }
 
 .col-6 {
     width: 50%;
 }
 
-.col-6 p {
+.col-6 label {
     display: flex;
-    flex-direction: row;
+    margin-top: 10px;
 }
 
-.col-6 input {
+.checkbox-section .col-6:nth-child(2) p:nth-child(2) {
+    color: rgb(136, 136, 136);
+}
+
+/* Checkbox new design */
+.checkbox input {
+    left: -9999px;
+}
+
+.checkbox input[type="checkbox"] {
+    /* opacity: 0; */
+    display: none;
+}
+
+/* Create the checkbox */
+.checkbox label {
+    position: relative;
+    padding-left: 25px;
+}
+
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    height: 15px;
     width: 15px;
+    border: 1px solid rgb(136, 136, 136);
+    position: absolute;
 }
 
+/* Create the checkmark */
+.checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 5px;
+    width: 8px;
+    border-left: 2px solid #00aff9;
+    border-bottom: 2px solid #00aff9;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+/*Outer-box*/
+.checkbox label::before {
+    top: 3px;
+    left: 0;
+}
+/*Checkmark*/
+.checkbox label::after {
+    left: 4px;
+    top: 7px;
+}
+
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
 
 /**** LAST PART ****/
 #link {
@@ -147,4 +193,12 @@ input[type="radio"]:checked + label {
     padding: 10px;
     color: white;
     border: 1px solid silver;
+}
+
+.portfolio input:first-of-type {
+    background-color: #444e58;
+    border: none;
+    border-bottom: 1px solid silver;
+    font-size: 0.8em;
+    padding-top: 20px;
 }

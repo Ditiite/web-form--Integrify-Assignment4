@@ -19,24 +19,30 @@
     <form>
         <!-- PERSONAL DATA -->
         <section class="info">
+
             <h2>1. Personal Information</h2>
+
             <div class="first-container">
+
                 <div class="col-8">
                     <input type="text" id="name" name="Full name" placeholder="Full name *">
                     <input type="email" id="email" name="Email" placeholder="Email *">
                     <input type="email" id="email" name="Re-enter email" placeholder="Re-enter email *">
                 </div>
+
                 <div class="col-4">
                     <input type="number" id="phone" name="Phone" placeholder="Phone *">
                 </div>
             </div>
+
             <input type="address" id="address" name="address" placeholder="Address *">
             <input type="address" id="address" name="address">
+
             <div class="city-data">
                 <input type="text" id="city" name="city" placeholder="City *">
                 <input type="text" id="state" name="state" placeholder="State *">
                 <input type="text" id="country" name="Country/region" placeholder="Country/Region *">
-                <input type="number" id="zip" name="Zip/Postal code" placeholder="Zip/Postal code *">
+                <input type="number" id="zip" name="Zip/Postal code" placeholder="Zip/Postal code *" min="0">
             </div>
           
             <input type="text" name="How did you hear about us" placeholder="How did you hear about us">
@@ -45,87 +51,98 @@
         <!-- SKILLS AND LOCATION -->
         <section>
             <h2>2. Skill and location</h2>
+
             <div>
                 <p>Which is your primary design discipline? *</p>
                 <div class="radio-buttons">
-                    <ul>
-                        <li>
-                            <input type="radio" id="research" name="design">
-                            <label for="research">Design Research</label>   
-                        </li>
-                        <li>
-                            <input type="radio" name="design" id="visual">
-                            <label for="visual">Visual Design</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="design" id="ux">
-                            <label for="ux" >UX Design</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="design" id="dev">
-                            <label for="dev"> Front-end Dev</label>
-                        </li>
-                    </ul>
+
+                        <input type="radio" id="research" name="design">
+                        <label for="research">Design Research</label>   
+                    
+                    
+                        <input type="radio" name="design" id="visual">
+                        <label for="visual">Visual Design</label>
+                    
+                    
+                        <input type="radio" name="design" id="ux">
+                        <label for="ux" >UX Design</label>
+                    
+                    
+                        <input type="radio" name="design" id="dev">
+                        <label for="dev"> Front-end Dev</label>
+                
                 </div>
             </div>
 
             <div class="checkbox-section">
                 <div class="col-6">
                     <p>Do you have experience with any other disciplines?</p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Visual Design
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        UX Design
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Front-end Development
-                    </p>
+                    <div class="checkbox">
+                         <input type="checkbox" id="check_1">
+                         <label for="check_1">Visual Design</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_2">
+                        <label for="check_2">UX Design</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_3">
+                        <label for="check_3">Front-end </label>
+                    </div>
+
+                    
                 </div>
+
                 <div class="col-6">
                     <p>Where are you interested working? *</p>
                     <p>You must be legaly authorized to work without visa sponsorship in the location you choose.</p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Austin, Texas
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        New York, New York
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Toronto, Canada
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Shanghai, China
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Dublin, Irland
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Hursley, United Kingdom
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Boblingen, Germany
-                    </p>
-                    <p>
-                        <input type="checkbox" name="design">
-                        Somewhere else 
-                    </p>
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_4">
+                        <label for="check_4">Austin, Texas</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_5">
+                        <label for="check_5">New York, New York</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_6">
+                        <label for="check_6">Toronto, Canada</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_7">
+                        <label for="check_7">Shanghai, China</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_8">
+                        <label for="check_8">Dublin, Irland </label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_9">
+                        <label for="check_9">Hursley, United Kingdom</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_10">
+                        <label for="check_10">Boblingen, Germany</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="check_11">
+                        <label for="check_11">Somewhere else</label>
+                    </div>  
                 </div>
             </div>
         </section>
 
     <!-- PORTFOLIO -->
-        <section>
+        <section class="portfolio">
             <h2>3. Portfolio</h2>
             <p>
                 Prove you're IBM's next great designer 
