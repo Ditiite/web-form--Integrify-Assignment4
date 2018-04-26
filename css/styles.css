@@ -15,6 +15,7 @@ input {
 
 textarea {
     outline-color: #92a7bb;    
+    transition: 0.6s;
 }
 
 .container {
@@ -37,7 +38,13 @@ h2 {
     margin-bottom: 15px;
 }
 
-
+.info input:hover,
+textarea:hover,
+.portfolio input:hover {
+   box-shadow: 1px 1px 10px silver;
+   border-radius: 5px;
+   letter-spacing: 2px;
+}
 
 /*** INPUT STYLE ***/
 .info input {
@@ -48,6 +55,7 @@ h2 {
     padding-top: 20px;
     margin-top: 10px;
     width: 100%;
+    transition: 0.6s;
 }
 
 /*****  PERSONAL DATA *****/
