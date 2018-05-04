@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Groovy Assignment-3 - Integrify</title>
+    <title>Web form Assignment-3 - Integrify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
@@ -25,26 +26,26 @@
             <div class="first-container">
 
                 <div class="col-8">
-                    <input type="text" id="name" name="name" placeholder="Full name *">
-                    <input type="email" id="email" name="email" placeholder="Email *">
-                    <input type="email" id="email-again" name="email-again" placeholder="Re-enter email *">
+                    <input type="text" id="name" name="name" placeholder="Full name *" pattern="[A-Za-z\s]+" required>
+                    <input type="email" id="email" name="email" placeholder="Email *"  required>
+                    <input type="email" id="email-again" name="email-again" placeholder="Re-enter email *" required>
                 </div>
 
                 <div class="col-4">
-                    <input type="number" id="phone" name="Phone" placeholder="Phone *">
+                    <input type="number" id="phone" name="Phone" placeholder="Phone *" pattern="[A-Za-z]" required>
                 </div>
             </div>
 
-            <textarea rows="1" cols="1" id="address" name="address" placeholder="Address *"></textarea>
+            <textarea rows="1" cols="1" id="address" name="address" placeholder="Address *" required></textarea>
 
             <div class="city-data">
-                <input type="text" id="city" name="city" placeholder="City *">
-                <input type="text" id="state" name="state" placeholder="State *">
-                <input type="text" id="country" name="country" placeholder="Country/Region *">
-                <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0">
+                <input type="text" id="city" name="city" placeholder="City *" pattern="[A-Za-z]" required>
+                <input type="text" id="state" name="state" placeholder="State " pattern="[A-Za-z]" >
+                <input type="text" id="country" name="country" placeholder="Country/Region *" pattern="[A-Za-z]" required>
+                <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0" pattern="[A-Za-z]" required>
             </div>
           
-            <input type="text" name="How did you hear about us" placeholder="How did you hear about us">
+            <input type="text" name="How did you hear about us" placeholder="How did you hear about us" pattern="[A-Za-z]">
         </section>
 
         <!-- SKILLS AND LOCATION -->
@@ -146,7 +147,7 @@
                 Prove you're IBM's next great designer 
                 by showing us who you are. What you've done. 
                 How you think. Tell us your story.</p>
-            <input type="link" name="link" placeholder="Portfolio link *" id="link">
+            <input type="link" name="link" placeholder="Portfolio link *" id="link" pattern="[A-Za-z]" required>
             <br>
             <textarea  rows="5" cols="1" placeholder="Anything else (another link, availability, etc)?" id="information"></textarea>
             <br>
