@@ -6,6 +6,7 @@ function checkEmail() {
     const eMail2 = document.querySelector('input[name="email-again"]').value;
     if(eMail1 != eMail2) {
         alert('Emails  emails don\'t match!');
+        return false;
     } 
 }
 
@@ -62,3 +63,4 @@ function validateURL(url) {
     const regexpUrl = /^(http[s]?:\/\/)?w{3}\.\w+\.[a-zA-Z]{2,5}(\.[a-zA-z]{0,2})?/;
     return regexpUrl.test(url);
 }
+
