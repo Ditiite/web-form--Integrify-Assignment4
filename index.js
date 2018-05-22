@@ -9,6 +9,8 @@ function checkEmail() {
     } 
 }
 
+
+// Check the radio buttons and checkboxes.
 function validate(form) {
     // Check radio buttons
     const targetEL = document.getElementsByName('design');
@@ -54,3 +56,9 @@ function validate(form) {
     }
 }
 
+
+// Checks if url is coreft form
+function validateURL(url) {
+    const regexpUrl = /^(http[s]?:\/\/)?w{3}\.\w+\.[a-zA-Z]{2,5}(\.[a-zA-z]{0,2})?/;
+    return regexpUrl.test(url);
+}
