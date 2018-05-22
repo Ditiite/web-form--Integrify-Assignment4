@@ -10,39 +10,47 @@ function checkEmail() {
 }
 
 function validate(form) {
-    let box = document.getElementsByName('design');
+    // Check radio buttons
+    const targetEL = document.getElementsByName('design');
+    let count = 0;
+    let countCheck = 0;  
 
-    for(let i = 0; i < box.length; ) {
-        if(box[i].checked) {
-            console.log("Hello");
-        }else if( )
-            
-        }
-        i++
-        console.log(i);
-        }
-        
-       
-    return false;
+    for(let i = 0; i < targetEL.length; i++) {
+        if(targetEL[i].checked) {
+            count++;
+            break;
+        }  
+    }
+
+    // Check checkbox
+    const checkboxEl = document.getElementsByName('check');
+    
+    for(let i = 0; i < checkboxEl.length; i++) {
+        if(checkboxEl[i].checked) {
+            countCheck++;
+            console.log(countCheck);
+            break;
+        }  
+    }
+
+    //If counters are more than one return true
+    if(count === 1 && countCheck >= 1) {
+        return true;
+
+    // Check which box has not been selected and alert accordingly to it.
+    }else if(!count && !countCheck) {
+        alert('You must select your primary design discipline and  where are you interested working?');
+        return false;
+
+    }else if(!count) {
+        alert('You must select your primary design discipline');
+        focus();
+        return false;
+
+    }else if(!countCheck) {
+        alert('You must select where are you interested working? ');
+        focus();
+        return false;
+    }
 }
-    
-
-
-
-
-// function validate(form) { 
-//     // Checking if at least one period button is selected. Or not. 
-    
-//     if (!form.design[0].checked && !form.design[1].checked && !form.design[2].checked && !form.design[3].checked){ 
-    
-//     alert("Please Select design"); 
-//     return false;}
-    
-    
-//     if(!document.form1.agree.checked){alert("Please check the terms and conditions");
-//         return false; } 
-    
-    
-//     return true;
-//     }
 
