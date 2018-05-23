@@ -77,7 +77,9 @@ textarea:hover,
 }
 
 .city-data {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
     width: 100%;
 }
 
@@ -243,7 +245,22 @@ input:required:placeholder-shown {
 }
 
 input:invalid {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+.invalid {
+    border-bottom: 2px solid rgb(255, 0, 0); 
+}
+
+#nameError,
+#emailError,
+#phoneError,
+#addressError,
+#cityError,
+#countryError,
+#zipError,
+#linkError {
+    color: red;
 }
 
 /* AUTOCOMPLETE */

@@ -6,14 +6,15 @@ function checkEmail() {
     const eMail2 = document.querySelector('input[name="email-again"]').value;
     if(eMail1 != eMail2) {
         alert('Emails  emails don\'t match!');
+        
         return false;
     } 
-}
-
+};
 
 // Check the radio buttons and checkboxes.
 function validate(form) {
-    form.preventDafault();
+    //form.preventDafault();
+     
     // Check radio buttons
     const targetEL = document.getElementsByName('design');
     let count = 0;
@@ -25,10 +26,7 @@ function validate(form) {
             break;
         }  
     }
-
-    // Validate email
-    checkEmail();
-
+    
     // Check checkbox
     const checkboxEl = document.getElementsByName('check');
     
@@ -43,31 +41,53 @@ function validate(form) {
     //If counters are more than one return true
     if(count === 1 && countCheck >= 1) {
         return true;
+        console.log(1);
+    }
 
     // Check which box has not been selected and alert accordingly to it.
-    }else if(!count && !countCheck) {
+    if(!count && !countCheck) {
         alert('You must select your primary design discipline and  where are you interested working?');
-        return false;
-
-    }else if(!count) {
-        alert('You must select your primary design discipline');
-        focus();
-        return false;
-
-    }else if(!countCheck) {
-        alert('You must select where are you interested working? ');
-        focus();
+        console.log(2);
         return false;
     }
 
-    let myForm = document.getElementsByName('myForm');
-    let isValid = myForm.checkValidity();
+    if(!count) {
+        alert('You must select your primary design discipline');
+        console.log(3);
+        return false;
+    }
+
+    if(!countCheck) {
+        alert('You must select where are you interested working? ');
+        console.log(4);
+        return false;
+    }
+
+    // Validate email
+    checkEmail();
+    
+};
+
+function phone() {
+    console.log('phone');
+    const passOne = document.getElementsByName('phone');
+    let value = '';
+    
+    passOne.addEventListener('submit', e => {
+        value = e.target.value;
+        const regex = /[\d]{6}/;
+        if (regex.test(e.target.value)) {
+            e.target.setCustomValidity('');
+        } else {
+            e.target.setCustomValidity('invalid phone number');
+            return false;
+        }
+    });
+    console.log('Hello');
 }
 
-
-// Checks if url is coreft form
-function validateURL(url) {
-    const regexpUrl = /^(http[s]?:\/\/)?w{3}\.\w+\.[a-zA-Z]{2,5}(\.[a-zA-z]{0,2})?/;
-    return regexpUrl.test(url);
-}
-
+// // Checks if url is coreft form
+// function validateURL(url) {
+//     const regexpUrl = /(^(http[s]?:\/\/)?|([w]{3}\.))?([\/\w.=?:;"!&-]+)/;
+//     return regexpUrl.test(url);
+// }
