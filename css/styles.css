@@ -253,13 +253,13 @@ input:invalid {
 }
 
 #nameError,
-#emailError,
 #phoneError,
 #addressError,
 #cityError,
 #countryError,
 #zipError,
-#linkError {
+#linkError,
+.error-message {
     color: red;
 }
 

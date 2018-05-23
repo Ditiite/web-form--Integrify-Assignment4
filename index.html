@@ -26,33 +26,41 @@
             <div class="first-container">
 
                 <div class="col-8">
-                    <input type="text" id="name" name="name" placeholder="Full name *" required>
-                    <p id="nameError"></p>
-                    <input type="text" id="email" name="email" placeholder="Email *" required>
-                    <p id="emailError"></p>
-                    <p id="emailError2"></p>
-                    <input type="email" id="email-again" name="email-again" placeholder="Re-enter email *" pattern="^(\.?\w+)+@[A-Za-z0-9]+\.[A-Za-z]+$" required>
+                    <input type="text" id="name" name="name" placeholder="Full name *" />
+                    <p id="nameError" class="error-message"></p>
+                    <input type="text" id="email" name="email" placeholder="Email *" />
+                    <p id="emailError" class="error-message"></p>
+                    <input type="email" id="email-again" name="email-again" placeholder="Re-enter email *" />
+                    <p id="emailError2" class="error-message"></p>
                 </div>
 
                 <div class="col-4">
-                    <input type="number" id="phone" name="phone" placeholder="Phone *" pattern="[\d]{6}" required>
+                    <input type="text" id="phone" name="phone" placeholder="Phone *" />
                     <p id="phoneError"></p>
                 </div>
             </div>
 
-            <input type="text" id="address" name="address" placeholder="Address *" pattern="^[a-zA-Z][\w'\s,-]+"></textarea>
+            <input type="text" id="address" name="address" placeholder="Address *" ></textarea>
             <p id="addressError"></p>
 
             <div class="city-data">
-           
-                    <input type="text" id="city" name="city" placeholder="City *" data-value-missing="This field is required!" pattern="^[a-zA-Z][\w\s'-]+" required>
+                <div>
+                    <input type="text" id="city" name="city" placeholder="City *" />
                     <p id="cityError"></p>
-                    <input type="text" id="state" name="state" placeholder="State"  pattern="^[a-zA-Z][\w\s'-]+">
+                </div>
+                <div>
+                    <input type="text" id="state" name="state" placeholder="State">
+                    <p id="stateError"></p>
+                </div>
                 
-                    <input type="text" id="country" name="country" placeholder="Country/Region *" pattern="^[a-zA-Z][\w\s'-]+" required> 
+                <div>
+                    <input type="text" id="country" name="country" placeholder="Country/Region *" > 
                     <p id="countryError"></p>
-                    <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0" required>
+                </div>
+                <div>
+                    <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0" >
                     <p id="zipError"></p>
+                </div>  
             </div>
           
             <input type="text" name="How did you hear about us" placeholder="How did you hear about us" pattern="([a-zA-Z\w[öä.!?_'-])+">
@@ -157,7 +165,7 @@
                 Prove you're IBM's next great designer 
                 by showing us who you are. What you've done. 
                 How you think. Tell us your story.</p>
-            <input type="link" name="link" placeholder="Portfolio link *" id="link" required>
+            <input type="link" name="link" placeholder="Portfolio link *" id="link">
             <p id="linkError"></p>
             <br>
             <textarea  rows="5" cols="1" placeholder="Anything else (another link, availability, etc)?" id="information"></textarea>
