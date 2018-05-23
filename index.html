@@ -32,20 +32,20 @@
                 </div>
 
                 <div class="col-4">
-                    <input type="number" id="phone" name="Phone" placeholder="Phone *" patter="^\+\d{3}\s?\d{9}$" required>
+                    <input type="number" id="phone" name="Phone" placeholder="Phone *" pattern="^\+\d{3}\s?\d{9}$" required>
                 </div>
             </div>
 
-            <input type="text" id="address" name="address" placeholder="Address *" pattern="\w[.'_-]?" required></textarea>
+            <input type="text" id="address" name="address" placeholder="Address *" pattern="\w+[.'_-]?"></textarea>
 
             <div class="city-data">
-                <input type="text" id="city" name="city" placeholder="City *" patter="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+" required>
-                <input type="text" id="state" name="state" placeholder="State"  patter="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+">
-                <input type="text" id="country" name="country" placeholder="Country/Region *" patter="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+" required> 
-                <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0" pattern="\w[._-]?" required>
+                <input type="text" id="city" name="city" placeholder="City *" pattern="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+" required>
+                <input type="text" id="state" name="state" placeholder="State"  pattern="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+">
+                <input type="text" id="country" name="country" placeholder="Country/Region *" pattern="^[a-zA-Z]+([\s'-]?)[\a-zA-Z]+" required> 
+                <input type="text" id="zip" name="zip" placeholder="Zip/Postal code *" min="0" pattern="\w+[._-]?" required>
             </div>
           
-            <input type="text" name="How did you hear about us" placeholder="How did you hear about us" pattern="([a-zA-Z\w[öä.!?_"'-])+" required>
+            <input type="text" name="How did you hear about us" placeholder="How did you hear about us" pattern="([a-zA-Z\w[öä.!?_'-])+" required>
         </section>
 
         <!-- SKILLS AND LOCATION -->

@@ -13,6 +13,7 @@ function checkEmail() {
 
 // Check the radio buttons and checkboxes.
 function validate(form) {
+    form.preventDafault();
     // Check radio buttons
     const targetEL = document.getElementsByName('design');
     let count = 0;
@@ -24,6 +25,9 @@ function validate(form) {
             break;
         }  
     }
+
+    // Validate email
+    checkEmail();
 
     // Check checkbox
     const checkboxEl = document.getElementsByName('check');
@@ -55,6 +59,9 @@ function validate(form) {
         focus();
         return false;
     }
+
+    let myForm = document.getElementsByName('myForm');
+    let isValid = myForm.checkValidity();
 }
 
 
