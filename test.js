@@ -13,7 +13,7 @@ function validate(myForm) {
     }
 
     // CHECK NUMBER
-    const regNum = /[\d]{6}/;
+    const regNum = /[\d]{9}/;
     const number = document.myForm.phone;
     const numErr = document.getElementById('phoneError');
 
